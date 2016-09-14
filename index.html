@@ -1,14 +1,48 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Vertical Timeline</title>
 
-    <link rel="stylesheet" href="reset.css">
+    <!-- Font Awesome CDN -->
+    <script src="https://use.fontawesome.com/2eb4742678.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
+
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
-    
+
   </head>
   <body>
+
+    <!-- section.container>ul.timeline>li.timeline-event>(.event-info>i.event-icon+h6+h2)+(article.event-detail>h3+p) - cha-ching! -->
+
+  <section class="container">
+    <ul class="timeline">
+
+      <li class="timeline-event">
+
+        <div class="event-info">
+          <span class="event-icon">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <h6 class="event-date">9/14/16</h6>
+          <h2 class="event-timestamp">07:30</h2>
+        </div>
+
+        <article class="event-detail">
+          <div class="event-card">
+            <h3>Rice-Bean Black Eyed Pea</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa voluptas eius nemo quas ad tempora maiores molestias, omnis? Porro cum adipisci voluptate ex, et officiis? Quo numquam ad dignissimos perferendis!</p>
+          </div>
+        </article>
+
+      </li>
+
+    </ul>
+
+  </section>
 
   </body>
 </html>
