@@ -52,17 +52,20 @@ h3 {
   font-size: 12px;
   color: #CED1DA;
   font-weight: 400;
+  transition: all 200ms ease-in-out;
 }
 
 .event-timestamp {
   font-size: 36px;
   color: #82BFE9;
   font-weight: 400;
+  transition: all 200ms ease-in-out;
 }
 
 .event-detail {
   border-left: 10px solid #B9DCF4;
   width: 74%;
+  transition: border-left 200ms ease-in-out;
 }
 
 .event-detail h3 {
@@ -82,6 +85,7 @@ h3 {
   background-color: #82BFE9;
   color: #ffffff;
   border-radius: 5px;
+  transition: all 200ms ease-in-out;
 }
 
 .event-card::before {
@@ -93,6 +97,7 @@ h3 {
   left: -16px;
   border: 8px solid transparent;
   border-right-color: #82BFE9;
+  transition: all 200ms ease-in-out;
 }
 
 .timeline-event:nth-child(even) .event-card {
@@ -106,6 +111,30 @@ h3 {
   border-color: white;
 }
 
+/* hover effects */
+.timeline-event:hover .event-date,
+.timeline-event:hover .event-timestamp {
+  color: #4482af;
+}
+
+.timeline-event:hover .event-card {
+  background-color: #4482af;
+}
+
+.timeline-event:hover .event-detail,
+.timeline-event:hover .event-icon {
+  border-color: #4482af;
+}
+
+.timeline-event:last-child:hover .event-detail {
+  border-color: #ffffff;
+}
+
+.timeline-event:hover .event-card::before {
+   border-right-color: #4482af;
+}
+
+/* icon container and icon */
 .event-icon {
   color: #ffffff;
   position: absolute;
@@ -118,6 +147,7 @@ h3 {
   height: 56px;
   border: 8px solid #B9DCF4;
   border-radius: 50%;
+  transition: all 200ms ease-in-out;
 }
 
 .event-icon i {
@@ -177,6 +207,11 @@ h3 {
   .timeline-event:nth-child(even) .event-card::before {
     border-bottom-color: #5395C5;
     border-right-color: transparent;
+  }
+
+  .timeline-event:hover .event-card::before {
+     border-right-color: transparent;
+     border-bottom-color: #4482af;
   }
 
 }
