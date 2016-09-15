@@ -7,8 +7,12 @@ body {
 }
 
 h1, h2, h3,
-h4, h5, h6 {
+h4, h5, h6, p {
   margin: 0;
+}
+
+h3 {
+  font-size: 22px;
 }
 
  img {
@@ -26,11 +30,9 @@ h4, h5, h6 {
  }
 
  .container {
-   max-width: 960px;
+   max-width: 1150px;
    margin: 0 auto;
-}
-
-.timeline-event {
+   padding: 0 20px;
 }
 
 .event-info,
@@ -41,7 +43,7 @@ h4, h5, h6 {
 }
 
 .event-info {
-  width: 200px;
+  width: 25%;
   padding-right: 38px;
   text-align: right;
 }
@@ -49,25 +51,34 @@ h4, h5, h6 {
 .event-date {
   font-size: 12px;
   color: #CED1DA;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .event-timestamp {
   font-size: 36px;
   color: #82BFE9;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .event-detail {
   border-left: 10px solid #B9DCF4;
-  width: 600px;
+  width: 74%;
+}
+
+.event-detail h3 {
+  border-bottom: 1px solid #B1D8F0;
+  padding-bottom: 6px;
+}
+
+.event-detail p {
+  margin-top: 10px;
 }
 
 .event-card {
   position: relative;
-  padding: 45px 40px;
+  padding: 45px 40px 67px;
   margin-left: 52px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background-color: #82BFE9;
   color: #ffffff;
   border-radius: 5px;
@@ -82,6 +93,17 @@ h4, h5, h6 {
   left: -16px;
   border: 8px solid transparent;
   border-right-color: #82BFE9;
+}
+
+.timeline-event:nth-child(even) .event-card {
+  background-color: #5395C5;
+}
+.timeline-event:nth-child(even) .event-card::before {
+  border-right-color: #5395C5;
+}
+
+.timeline-event:last-child .event-detail {
+  border-color: white;
 }
 
 .event-icon {
@@ -103,4 +125,58 @@ h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 650px){
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .event-info,
+  .event-detail  {
+    display: block;
+    width: 100%;
+  }
+
+  .event-info {
+    text-align: left;
+    padding-right: 0;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .event-date {
+    font-size: 14px;
+  }
+
+  .event-icon {
+    position: relative;
+    float: right;
+    top: 10px;
+    right: 0px;
+  }
+
+  .event-detail {
+    border: none;
+    width: 100%;
+  }
+
+  .event-card {
+    margin: 0 auto;
+  }
+
+  .event-card::before {
+    top: -16px;
+    left: 12px;
+    border: 8px solid transparent;
+    border-left-color: transparent;
+    border-bottom-color: #82BFE9;
+  }
+
+  .timeline-event:nth-child(even) .event-card::before {
+    border-bottom-color: #5395C5;
+    border-right-color: transparent;
+  }
+
 }
